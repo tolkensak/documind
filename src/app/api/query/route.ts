@@ -20,6 +20,7 @@ import { validateEnv, RAG_CONFIG } from "@/lib/rag/config";
 
 export const maxDuration = 10;
 export const runtime = "nodejs";
+export const dynamic = 'force-dynamic';
 
 export async function POST(request: NextRequest) {
     try {

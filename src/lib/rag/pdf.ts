@@ -2,10 +2,9 @@
 /**
  * PDF Parser
  *
- * Uses pdf-parse-new (a community fork of pdf-parse with the debug bug fixed)
+ * Uses pdf-parse-new with a runtime-only import
+ * to avoid Vercel bundling issues
  */
-
-import pdfParse from "pdf-parse-new";
 
 export interface ParsedPage {
     pageNumber: number;
@@ -23,6 +22,9 @@ export async function parsePDF(
     buffer: Buffer,
     fileName: string,
 ): Promise<ParsedPDF> {
+    // ✅ Dynamic import at runtime (avoids Vercel bundling)
+    const pdfParse = (await import("pdf-parse-new")).default;
+
     const pages: ParsedPage[] = [];
     let currentPage = 0;
 

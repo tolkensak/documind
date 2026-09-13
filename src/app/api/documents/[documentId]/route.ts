@@ -11,8 +11,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { deleteDocumentChunks } from "@/lib/rag/vectorstore";
 import { validateEnv } from "@/lib/rag/config";
 
-export const maxDuration = 60;
+export const maxDuration = 10;
 export const runtime = "nodejs";
+export const dynamic = 'force-dynamic';
 
 export async function DELETE(
     request: NextRequest,
