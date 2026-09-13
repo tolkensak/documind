@@ -18,7 +18,7 @@ import { searchSimilarChunks } from "@/lib/rag/vectorstore";
 import { generateAnswer } from "@/lib/rag/llm";
 import { validateEnv, RAG_CONFIG } from "@/lib/rag/config";
 
-export const maxDuration = 60;
+export const maxDuration = 10;
 export const runtime = "nodejs";
 
 export async function POST(request: NextRequest) {

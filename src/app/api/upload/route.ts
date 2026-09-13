@@ -22,7 +22,7 @@ import { validateEnv } from "@/lib/rag/config";
 import { randomUUID } from "crypto";
 
 // ✅ Next.js App Router: increase body size limit for PDFs
-export const maxDuration = 60; // seconds (Vercel limit)
+export const maxDuration = 10; // seconds (Vercel limit)
 export const runtime = "nodejs"; // pdf-parse needs Node.js
 
 export async function POST(request: NextRequest) {
