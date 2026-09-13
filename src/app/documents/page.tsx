@@ -13,7 +13,7 @@ import {
     Loader2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
     AlertDialog,
@@ -24,6 +24,7 @@ import {
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle,
+    AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
 import type { DocumentMetadata } from "@/types";
@@ -171,6 +172,7 @@ export default function DocumentsPage() {
                                             </div>
                                         </div>
 
+                                        {/* ✅ Delete button with AlertDialog - FIXED */}
                                         <AlertDialog>
                                             <AlertDialogTrigger asChild>
                                                 <Button
